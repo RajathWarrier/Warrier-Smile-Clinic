@@ -1,0 +1,51 @@
+@import url('https://fonts.googleapis.com/css2?family=Open+Sans+Condensed:wght@300&display=swap');
+
+.services-container {
+    padding-bottom: 20px;
+    padding-top: 120px;
+    margin-left: -8px;
+    margin-right: -8px;
+    display: grid;
+    grid-template-columns: 20% 80%;
+    background-color: #f4f4f4;
+}
+.services-heading {
+    margin-left: 120px;
+    font-family: 'Open Sans Condensed', sans-serif;
+    font-size: 42px;
+    font-weight: bold;
+    color: #cc0e74;
+    letter-spacing: 0.5rem;
+}
+.services {
+    width: 80%;
+    margin-left: 180px;
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr 1fr;
+    box-shadow: 5px 5px 24px 2px #3b3b3b;
+}
+.service {
+    padding-top: 40px;
+    padding-bottom: 20px;
+    padding-left: 20px;
+    padding-right: 10px;
+    text-align: center;
+    font-family: 'Open Sans Condensed', sans-serif;
+    color: white;
+    background-color: #2c2652;
+    letter-spacing: 0.1rem;
+}
+.s-image {
+    width: 64x;
+    height: 64px;
+}
+.service-name {
+    font-size: 24px;
+    font-weight: bold;
+}
+.sub-service-name {
+    font-size: 20px;
+}
+.makeopaque {
+    opacity: 0.2;
+}

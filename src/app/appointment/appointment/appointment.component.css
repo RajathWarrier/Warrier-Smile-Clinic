@@ -1,0 +1,37 @@
+.appointment-container {
+    width: 40%;
+    margin: auto;
+    border: 1px solid;
+    background-color: #363062;
+}
+.name-container {
+    display: flex;
+}
+form {
+    padding-left: 80px;
+    padding-top: 20px;
+    padding-bottom: 20px;
+}
+.form-control {
+    width: 85%;
+}
+.last-name-field {
+    margin-left: 60px;
+}
+label {
+    color: #ffffff;
+    font-family: 'Open Sans Condensed', sans-serif;
+    font-size: 22px;
+    letter-spacing: 0.1rem;
+}
+.btn {
+    background-color: #ffffff;
+    border: none;
+    color: #363062;
+    font-family: 'Open Sans Condensed', sans-serif;
+    font-size: 18px;
+    font-weight: bold;
+}
+.btn:hover {
+    background-color: #cc0e74;
+}

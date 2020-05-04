@@ -1,0 +1,31 @@
+<div *ngIf="!hidden" class="appointment-container">
+    <form>
+        <div class="name-container">
+            <div class="form-group first-name-field">
+                <label for="name">First Name</label>
+                <input name="name" type="text" class="form-control name-input" id="name" required>
+            </div>
+            <div class="form-group last-name-field">
+                <label for="name">Last Name</label>
+                <input name="name" type="text" class="form-control name-input" id="name" required>
+            </div>
+        </div>
+        <div class="form-group email-field">
+            <label for="email">Email-ID</label>
+            <input type="text" class="form-control email-input" id="email" required>
+        </div>
+        <div class="form-group contact-no-field">
+            <label for="contact-no">Contact Number</label>
+            <input type="text" class="form-control contact-no-input" id="contact-no" required>
+        </div>
+        <div class="form-group message">
+            <label for="message">Preferred Date</label>
+            <input type="date" class="form-control preffered-date-input" id="date">
+        </div>
+        <div class="form-group message">
+            <label for="message">Preferred Time</label>
+            <input type="time" class="form-control preffered-time-input" id="time">
+        </div>
+        <button type="submit" class="btn btn-primary" (click)="alert()">Submit</button>
+    </form>
+</div>

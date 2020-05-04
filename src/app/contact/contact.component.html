@@ -1,0 +1,35 @@
+<div class="main-container" [ngClass]="{'makeopaque':apptStatus}">
+    <p class="section-heading">Get In touch</p>
+    <div class="contact-wrapper">
+        <div class="info">
+            <p class="name">Dr. Adarsh</p>
+            <p class="number">+91 7975896284</p>
+            <p class="name">Dr. Remya Warrier</p>
+            <p class="number">+91 8921999720</p>
+            <div class="email-container">
+                <p class="email">warriersmileclinic@gmail.com</p>
+            </div>
+        </div>
+        <div class="message_us">
+            <form>
+                <div class="form-group name-field">
+                    <label for="name">Name</label>
+                    <input name="name" type="text" class="form-control name-input" id="name" required>
+                </div>
+                <div class="form-group email-field">
+                    <label for="email">Email-ID</label>
+                    <input type="text" class="form-control email-input" id="email" required>
+                </div>
+                <div class="form-group contact-no-field">
+                    <label for="contact-no">Contact Number</label>
+                    <input type="text" class="form-control contact-no-input" id="contact-no" required>
+                </div>
+                <div class="form-group message">
+                    <label for="message">Message</label>
+                    <textarea name="" id="message" cols="30" rows="6" class="form-control"></textarea>
+                </div>
+                <button type="submit" class="btn btn-primary" (click)="showName">Submit</button>
+            </form>
+        </div>
+    </div>
+</div>

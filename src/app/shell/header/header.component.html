@@ -1,0 +1,25 @@
+<div class="navbar" [ngClass]="{'makeopaque':apptStatus}">
+    <div class="container navbar-item">
+        <div class="logo_container">
+            <div class="logo-link">
+                <div class="circ-logo_container">
+                    <img class="circ-logo" src="assets/images/circularlogo.png"/>
+                </div>
+                <div class="logo-name">
+                    <ul class="logo">
+                        <li class="warrier-logo">Warrier</li>
+                        <li class="smile-logo">SMILE CLINIC</li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+        <div class="menu navbar-item">
+            <div class="menu-options">
+                <ul class="menu-item">
+                    <li class="menu-link about-menu" (click)="navigate('about')">About</li>
+                    <li class="menu-link contact-menu" (click)="navigate('contact')">Contact</li>
+                </ul>
+            </div>
+        </div>
+    </div>
+</div>

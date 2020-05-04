@@ -1,0 +1,118 @@
+<div class="appointment-container" [ngClass]="{'appointment_show':!hidden}">
+    <div class="cancel">
+        <div></div>
+        <div class="cross" (click)="showAppointment()">X</div>
+    </div>
+    <form>
+        <p class="heading">Schedule an appointment and we'll get back to you</p>
+        <div class="name-container">
+            <div class="form-group first-name-field">
+                <label for="name">First Name*</label>
+                <input name="name" type="text" class="form-control name-input" id="name" required>
+            </div>
+            <div class="form-group last-name-field">
+                <label for="name">Last Name</label>
+                <input name="name" type="text" class="form-control name-input" id="name">
+            </div>
+        </div>
+        <div class="form-group email-field">
+            <label for="email">Email-ID*</label><div></div>
+            <input type="text" class="form-control email-input" id="email" required>
+        </div>
+        <div class="form-group contact-no-field">
+            <label for="contact-no">Contact Number*</label>
+            <input type="text" class="form-control contact-no-input" id="contact-no" required>
+        </div>
+        <div class="form-group message">
+            <label for="message">Preferred Date</label>
+            <input type="date" class="form-control preffered-date-input" id="date">
+        </div>
+        <div class="form-group message">
+            <label for="message">Preferred Time</label>
+            <input type="time" class="form-control preffered-time-input" id="time">
+        </div>
+        <button type="submit" class="btn btn-primary">Submit</button>
+        <button type="submit" class="btn btn-primary" (click)="showAppointment()">Cancel</button>
+        <div class="mandatory">Fields marked with * are mandatory</div>
+    </form>
+</div>
+<div class="navbar fade" [ngClass]="{'makeopaque':!hidden}">
+    <div class="container navbar-item">
+        <div class="logo_container">
+            <div class="logo-link">
+                <div class="circ-logo_container">
+                    <img class="circ-logo" src="assets/images/circularlogo.png"/>
+                </div>
+                <div class="logo-name">
+                    <ul class="logo">
+                        <li class="warrier-logo">Warrier</li>
+                        <li class="smile-logo">SMILE CLINIC</li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+        <div class="menu navbar-item">
+            <div class="menu-options">
+                <ul class="menu-item">
+                    <li class="menu-link about-menu" [ngClass]="{'about-menu-active':showAbout}"><div (click)="show('about')">About</div></li>
+                    <li class="menu-link contact-menu" [ngClass]="{'contact-menu-active':showContact}"><div (click)="show('contact')">Contact</div></li>
+                </ul>
+            </div>
+        </div>
+    </div>
+</div>
+<div class="dropdown-container" [ngClass]="{'dropdown-container1':showAbout}">
+    <div class="about-content dropdown-content">
+        <p class="cancel" (click)="show('about')">X</p>
+        <p class="content">Lorem ipsum dolor sit, amet consectetur adipisicing elit. Reiciendis consectetur accusantium, delectus assumenda soluta illum sint quasi ipsam repudiandae repellendus velit excepturi voluptatibus! Tempora corrupti iste earum, nobis voluptates nisi.</p>
+        <p class="content">Lorem ipsum dolor sit, amet consectetur adipisicing elit. Reiciendis consectetur accusantium, delectus assumenda soluta illum sint quasi ipsam repudiandae repellendus velit excepturi voluptatibus! Tempora corrupti iste earum, nobis voluptates nisi.</p>
+    </div>
+</div>
+<div class="dropdown-container"  [ngClass]="{'dropdown-container2':showContact}">
+    <div class="contact-content dropdown-content">
+        <p class="cancel" (click)="show('contact')">X</p>
+        <p class="content">For Any Queries You Can Reach Us At</p>
+        <p class="number">+91 7975896284</p>
+        <p class="number">+91 8921999720</p>
+    </div>
+</div>
+<div class="main-container fade" [ngClass]="{'makeopaque':!hidden}">
+    <div class="top-container">
+        <div class="left-container">
+            <div class="left-brief">
+                <p>One Stop Destination For All Latest Dental </p>
+                <p>Solutions And A Painfree Approach</p>
+            </div>
+        </div>
+        <div class="right-container">
+            <section class="right-brief">Healthy Smiles Healthy Lives</section>
+            <section class="warrier">Warrier</section>
+            <section class="smile">SMILE CLINIC</section>
+            <div class="buttons_home">
+                <div class="button_home" (click)="showAppointment()">
+                    <div class="appt">Book Appointment</div>
+                </div>
+            </div>
+        </div>
+    </div>
+    <div class="bottom-container" [ngSwitch]="index">
+        <div class="carousel">
+            <div class="carousel-item fade" *ngSwitchCase="1">
+                <img src="../../assets/images/patient.jpg" class="image" alt="...">
+            </div>
+            <div class="carousel-item fade" *ngSwitchCase="2">
+              <img src="../../assets//images/clnic_outside.jpg" class="image" alt="...">
+            </div>
+            <div class="carousel-item fade" *ngSwitchCase="3">
+              <img src="../../assets//images/dental_chair.jpg" class="image" alt="...">
+            </div>
+        </div>
+    </div>
+    <div class="arrow">
+        <img src=""/>
+    </div>
+</div>
+<!--<div>Icons made by <a href="https://www.flaticon.com/authors/freepik" title="Freepik">Freepik</a> from <a href="https://www.flaticon.com/" title="Flaticon">www.flaticon.com</a></div>
+<div>Icons made by <a href="https://www.flaticon.com/authors/nikita-golubev" title="Nikita Golubev">Nikita Golubev</a> from <a href="https://www.flaticon.com/" title="Flaticon">www.flaticon.com</a></div>
+<div>Icons made by <a href="https://www.flaticon.com/authors/smalllikeart" title="smalllikeart">smalllikeart</a> from <a href="https://www.flaticon.com/" title="Flaticon">www.flaticon.com</a></div>
+<a href="https://www.freepik.com/free-photos-vectors/smile">Smile photo created by Racool_studio - www.freepik.com</a>-->

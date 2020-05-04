@@ -1,0 +1,43 @@
+@import url('https://fonts.googleapis.com/css2?family=Dancing+Script&display=swap');
+
+.footer-container{
+    margin-left: -8px;
+    margin-right: -8px;
+    background-color: #2c2652;
+    color: white;
+}
+.footer{
+    padding-top: 20px;
+    padding-bottom: 20px;
+    margin: auto;
+    display: grid;
+    grid-template-columns: 33% 33% 33%;
+}
+.logo {
+    margin: auto;
+}
+.warrier {
+    font-family: 'Roboto Slab', serif;
+    letter-spacing: 0.1rem;
+    font-style: italic;
+    text-align: center;
+    font-size: 28px;
+}
+.smile {
+    font-family: 'Audiowide';
+    letter-spacing: 0.1rem;
+    text-align: center;
+    font-size: 20px;
+}
+.contact, .credits {
+    font-family: 'Open Sans Condensed', sans-serif;
+}
+.contact-heading, .credits-heading {
+    text-decoration: underline;
+}
+a {
+    color: rgb(109, 109, 250);
+}
+.makeopaque {
+    opacity: 0.2;
+}

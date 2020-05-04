@@ -1,0 +1,80 @@
+@import url('https://fonts.googleapis.com/css2?family=Open+Sans+Condensed:wght@300&display=swap');
+
+.main-container {
+    margin-left: -8px;
+    margin-right: -8px;
+    background-color: #f4f4f4;
+    padding-bottom: 30px;
+    padding-top: 10px;
+}
+.doctors-wrapper {
+    width: 70%;
+    margin: auto;
+}
+.doctor-container {
+    display: grid;
+    grid-template-columns: 50% 50%;
+    margin: auto;
+    background-color: #ffffff;
+    box-shadow: 5px 5px 24px 2px #3b3b3b;
+    margin-bottom: 5px;
+}
+.doctor1 {
+    border-right: 10px solid #363062;
+}
+.doctor2 {
+    border-left: 10px solid #363062;
+}
+.section-heading {
+    font-size: 42px;
+    font-weight: bold;
+    letter-spacing: 0.5rem;
+    text-align: center;
+    color: #cc0e74;
+    font-family: 'Open Sans Condensed', sans-serif;
+}
+.content {
+    color: #363062;
+    font-family: 'Open Sans Condensed', sans-serif;
+}
+.content1 {
+    text-align: right;
+}
+.brief-remya {
+    float: right;
+}
+.image{
+    width: 100%;
+    height: 400px;
+}
+img {
+    max-width: 100%;
+    max-height: 100%;
+}
+.img-remya {
+    margin-left: 100px;
+}
+.img-adarsh {
+    float: right;
+    margin-right: 100px;
+}
+.name-text {
+    font-size: 36px;
+    font-weight: bold;
+    letter-spacing: 0.5rem;
+}
+.credentials {
+    margin-top: -40px;
+    font-size: 18px;
+    color: #cc0e74;
+}
+.specialization {
+    font-size: 22px;
+    margin-top: 40px;
+}
+.brief {
+    font-size: 22px;
+}
+.makeopaque {
+    opacity: 0.2;
+}
