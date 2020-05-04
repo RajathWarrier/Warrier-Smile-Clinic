@@ -1,5 +1,4 @@
 @import url('https://fonts.googleapis.com/css2?family=Open+Sans+Condensed:wght@300&display=swap');
-@import url('../../styles/bootstrap-4.4.1-dist/css/bootstrap.min.css');
 
 .main-container {
     padding-top: 20px;
@@ -62,21 +61,37 @@ form {
     margin: 20px 0px 20px 60px;
 }
 .form-control {
-    width: 80%;
+    display:block;
+    width:80%;
+    margin-top: 10px;
+    margin-bottom: 10px;
+    background-color:#ffff;
+    border:1px solid #ced4da;
+    border-radius:.25rem;
 }
 .form-control:focus {
     background-color: #d1a2cb;
 }
+.name-input, .contact-no-input, .email-input {
+    height: 30px;
+}
 .btn {
+    height: 35px;
+    width: 80px;
     background-color: #ffffff;
     border: none;
     color: #363062;
     font-family: 'Open Sans Condensed', sans-serif;
-    font-size: 20px;
+    font-size: 18px;
     font-weight: bold;
+    margin-top: 20px;
+    margin-right: 20px;
+    border-radius: 4px;
 }
 .btn:hover {
     background-color: #cc0e74;
+    color: white;
+    cursor: pointer;
 }
 .makeopaque {
     opacity: 0.2;
