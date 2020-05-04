@@ -9,10 +9,6 @@ export class AppointmentComponent implements OnInit {
 
   constructor() {}
 
-  private alert() {
-    window.alert('Thank you for making an appointment with us! We`ll get back to you soon');
-  }
-
   ngOnInit() {
   }
 

@@ -7,7 +7,7 @@ import { Component, OnInit, Input } from '@angular/core';
 })
 export class VisitComponent implements OnInit {
 
-  @Input() private apptStatus;
+  @Input() public apptStatus;
 
   constructor() { }
 

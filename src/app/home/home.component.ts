@@ -9,11 +9,11 @@ export class HomeComponent implements OnInit {
 
   @Output() apptStatus = new EventEmitter<boolean>();
 
-  private index = 0;
+  public index = 0;
   private images = 3;
   public hidden = true;
-  private showAbout = false;
-  private showContact = false;
+  public showAbout = false;
+  public showContact = false;
 
   constructor() { }
 

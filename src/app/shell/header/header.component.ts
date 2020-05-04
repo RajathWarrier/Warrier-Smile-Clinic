@@ -6,7 +6,7 @@ import { Component, OnInit, EventEmitter, Input, Output } from '@angular/core';
   styleUrls: ['./header.component.css']
 })
 export class HeaderComponent implements OnInit {
-  @Input() private apptStatus;
+  @Input() public apptStatus;
 
   constructor() {}
 
