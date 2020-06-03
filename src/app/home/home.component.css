@@ -4,9 +4,6 @@
 @import url('../shell/header/header.component.css');
 
 .main-container {
-    /*background-image: url("../../assets/images/landingpagebackground1.jpg");*/
-    margin-left: -8px;
-    margin-right: -8px;
     background-size: cover;
     display: grid;
     grid-template-rows: 75% 25%;
@@ -21,15 +18,11 @@
 }
 .left-container {
     width: 50%;
-    padding: 35px 5px 0px 20px;
+    padding: 0px 0px 4vh 2vw;
 }
 .right-container {
-    padding-top: 35px;
     width: 50%;
     float: right;
-    justify-content: center;
-    align-items: center;
-    position: relative;
     color: #d82283;
 }
 .right-brief {
@@ -41,7 +34,7 @@
 .left-brief {
     margin-left: 50px;
     margin-right: 80px;
-    font-size: 30px;
+    font-size: 28px;
     font-weight: 500;
     font-family: 'Dancing Script', cursive;
     letter-spacing: 0.1rem;
@@ -52,7 +45,8 @@
     letter-spacing: 0.1rem;
     font-style: italic;
     text-align: center;
-    font-size: 48px;
+    font-size: 42px;
+    margin-top: -2.8vh;
 }
 .smile {
     font-family: 'Audiowide';
@@ -96,20 +90,30 @@
     color: #fbdff0;
 }
 .carousel {
-    width: 569px;
-    height: 300px;
+    width: 37vw;
+    height: 41.55vh;
     margin-left: 60px;
     margin-top: -120px;
-    box-shadow: 5px 5px 12px #3b3b3b;
-    background-color: #4d4646;
 }
 .carousel-item {
-    width: 569px;
-    height: 300px;
+    width: 37vw;
+    height: 41.55vh;
+    box-shadow: 5px 5px 12px #3b3b3b;
+}
+@media screen and (max-width: 960px) {
+    .carousel-item {
+        display: none;
+    }
+    .left-container {
+        display: none;
+    }
+    .right-container {
+        width: 100%;
+    }
 }
 .image {
-    width: 569px;
-    height: 300px;
+    width: 37vw;
+    height: 41.55vh;
     object-fit: cover;
 }
 .fade {
@@ -134,9 +138,9 @@
 /*Appointment Card*/
 .appointment-container {
     position: fixed;
-    width: 40%;
-    margin-left: 29%;
-    margin-top: 42px;
+    width: 40vw;
+    margin-left: 30vw;
+    margin-top: 6vh;
     background-color: #2c2652;
     border-radius: 8px;
     box-shadow: 8px 8px 18px #3b3b3b;
@@ -155,13 +159,13 @@
     display: flex;
 }
 form {
-    padding-left: 80px;
-    padding-top: 20px;
-    padding-bottom: 20px;
+    padding-left: 12%;
+    padding-top: 3%;
+    padding-bottom: 4%;
 }
 .form-control {
     width: 85%;
-    height: 30px;
+    height: 4.155vh;
     border-radius: 4px;
     border: none;
     margin: 10px 0px 10px 0px;
@@ -225,4 +229,10 @@ label {
 }
 a {
     text-decoration: none;
+}
+@media screen and (max-width: 700px) {
+    .appointment-container {
+        width: 90%;
+        margin-left: 2vw;
+    }
 }

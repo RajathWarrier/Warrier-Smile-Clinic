@@ -2,33 +2,45 @@
 
 .services-container {
     padding-bottom: 20px;
-    padding-top: 120px;
-    margin-left: -8px;
-    margin-right: -8px;
-    display: grid;
-    grid-template-columns: 20% 80%;
+    padding-top: 11vh;
     background-color: #f4f4f4;
 }
 .services-heading {
-    margin-left: 120px;
+    margin: auto;
     font-family: 'Open Sans Condensed', sans-serif;
     font-size: 42px;
     font-weight: bold;
     color: #cc0e74;
     letter-spacing: 0.5rem;
+    text-align: center;
 }
 .services {
     width: 80%;
-    margin-left: 180px;
+    margin: auto;
+    position: relative;
     display: grid;
     grid-template-columns: 1fr 1fr 1fr 1fr;
     box-shadow: 5px 5px 24px 2px #3b3b3b;
 }
+@media screen and (max-width: 960px) {
+    .services {
+        width: 100%;
+    }
+    .services-container {
+        padding-top: 10px;
+    }
+    .service-name {
+        font-size: 20px;
+    }
+    .sub-service-name {
+        font-size: 16px;
+    }
+}
 .service {
-    padding-top: 40px;
-    padding-bottom: 20px;
-    padding-left: 20px;
-    padding-right: 10px;
+    padding-top: 5.54vh;
+    padding-bottom: 2.77vh;
+    padding-left: 0.651vw;
+    padding-right: 0.651vw;
     text-align: center;
     font-family: 'Open Sans Condensed', sans-serif;
     color: white;
@@ -36,15 +48,15 @@
     letter-spacing: 0.1rem;
 }
 .s-image {
-    width: 64x;
-    height: 64px;
+    width: 48px;
+    height: 48px;
 }
 .service-name {
-    font-size: 24px;
+    font-size: 22px;
     font-weight: bold;
 }
 .sub-service-name {
-    font-size: 20px;
+    font-size: 18px;
 }
 .makeopaque {
     opacity: 0.2;

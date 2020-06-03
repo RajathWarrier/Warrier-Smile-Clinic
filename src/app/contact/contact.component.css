@@ -4,7 +4,6 @@
     padding-top: 20px;
     padding-bottom: 20px;
     background-color: #f4f4f4;
-    margin-right: -8px;
 }
 .section-heading {
     font-size: 42px;
@@ -23,6 +22,14 @@
     border-top: 4px solid #cc0e74;
     border-left: 4px solid #cc0e74;
     border-bottom: 4px solid #cc0e74;
+}
+@media screen and (max-width: 960px) {
+    .contact-wrapper {
+        width: 100%;
+    }
+    .email {
+        display: none;
+    }
 }
 .info {
     text-align: left;

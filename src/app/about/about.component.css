@@ -1,8 +1,6 @@
 @import url('https://fonts.googleapis.com/css2?family=Open+Sans+Condensed:wght@300&display=swap');
 
 .main-container {
-    margin-left: -8px;
-    margin-right: -8px;
     background-color: #f4f4f4;
     padding-bottom: 30px;
     padding-top: 10px;
@@ -10,6 +8,11 @@
 .doctors-wrapper {
     width: 70%;
     margin: auto;
+}
+@media screen and (max-width: 960px) {
+    .doctors-wrapper {
+        width: 80%;
+    }
 }
 .doctor-container {
     display: grid;
@@ -52,11 +55,11 @@ img {
     max-height: 100%;
 }
 .img-remya {
-    margin-left: 100px;
+    margin-left: 6.51vw;
 }
 .img-adarsh {
     float: right;
-    margin-right: 100px;
+    margin-right: 6.51vw;
 }
 .name-text {
     font-size: 36px;
