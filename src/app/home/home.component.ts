@@ -1,4 +1,5 @@
 import { Component, OnInit, EventEmitter, Input, Output } from '@angular/core';
+import {FormBuilder, FormGroup } from '@angular/forms';
 
 @Component({
   selector: 'app-home',
@@ -14,8 +15,20 @@ export class HomeComponent implements OnInit {
   public hidden = true;
   public showAbout = false;
   public showContact = false;
+  appointmentForm: FormGroup;
 
-  constructor() { }
+  constructor(
+    public formBuilder: FormBuilder
+  ) {
+    this.appointmentForm = this.formBuilder.group({
+      fName: [''],
+      lName: [''],
+      email: [''],
+      contactNo: [''],
+      prefDate: [''],
+      prefTime: ['']
+    });
+   }
 
   ngOnInit() {
     this.showSlides();
@@ -45,6 +58,15 @@ export class HomeComponent implements OnInit {
         this.showAbout = !this.showAbout;
         break;
     }
+  }
+
+  submitForm() {
+    const formData = new FormData();
+    formData.append('name', this.appointmentForm.get('fName').value + ' ' + this.appointmentForm.get('lName').value);
+    formData.append('email', this.appointmentForm.get('email').value);
+    formData.append('contactNo', this.appointmentForm.get('contactNo').value);
+    formData.append('preferredDateTime', this.appointmentForm.get('prefDate').value + ' ' + this.appointmentForm.get('prefTime').value);
+    console.log(formData.get('name') + ' ' + formData.get('preferredDateTime'));
   }
 
 }
