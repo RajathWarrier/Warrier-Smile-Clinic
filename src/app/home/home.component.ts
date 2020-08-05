@@ -1,5 +1,6 @@
 import { Component, OnInit, EventEmitter, Input, Output } from '@angular/core';
 import {FormBuilder, FormGroup } from '@angular/forms';
+import { FormService } from '../form/form.service';
 
 @Component({
   selector: 'app-home',
@@ -18,7 +19,8 @@ export class HomeComponent implements OnInit {
   appointmentForm: FormGroup;
 
   constructor(
-    public formBuilder: FormBuilder
+    public formBuilder: FormBuilder,
+    private formService: FormService
   ) {
     this.appointmentForm = this.formBuilder.group({
       fName: [''],
@@ -62,11 +64,15 @@ export class HomeComponent implements OnInit {
 
   submitForm() {
     const formData = new FormData();
+    formData.append('type', 'Appointment');
     formData.append('name', this.appointmentForm.get('fName').value + ' ' + this.appointmentForm.get('lName').value);
     formData.append('email', this.appointmentForm.get('email').value);
     formData.append('contactNo', this.appointmentForm.get('contactNo').value);
     formData.append('preferredDateTime', this.appointmentForm.get('prefDate').value + ' ' + this.appointmentForm.get('prefTime').value);
-    console.log(formData.get('name') + ' ' + formData.get('preferredDateTime'));
+
+    this.formService.sendFormData(formData);
+    alert('Thank you for contacting us, we`ll get back to you soon!');
+    this.appointmentForm.reset();
   }
 
 }

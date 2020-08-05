@@ -1,5 +1,6 @@
 import { Component, OnInit, Input } from '@angular/core';
 import {FormBuilder, FormGroup } from '@angular/forms';
+import { FormService } from '../form/form.service';
 
 @Component({
   selector: 'app-contact',
@@ -13,7 +14,8 @@ export class ContactComponent implements OnInit {
   contactForm: FormGroup;
 
   constructor(
-    public formBuilder: FormBuilder
+    public formBuilder: FormBuilder,
+    private formService: FormService
   ) {
     this.contactForm = this.formBuilder.group({
       name: [''],
@@ -27,12 +29,15 @@ export class ContactComponent implements OnInit {
 
   submitForm() {
     const formData = new FormData();
+    formData.append('type', 'enquiry');
     formData.append('name', this.contactForm.get('name').value);
     formData.append('email', this.contactForm.get('email').value);
     formData.append('contactNo', this.contactForm.get('contactNo').value);
     formData.append('message', this.contactForm.get('message').value);
 
-    console.log('Sending form data to server');
+    this.formService.sendFormData(formData);
+    alert('Thank you for contacting us, we`ll get back to you soon!');
+    this.contactForm.reset();
   }
 
 }
